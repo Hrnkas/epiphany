@@ -97,7 +97,6 @@ class EpiRoute
    */
   public function load($file)
   {
-    print "si si la estsa cargando...<br>\n";
     $file = Epi::getPath('config') . "/{$file}";
     if(!file_exists($file))
     {
