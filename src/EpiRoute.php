@@ -97,6 +97,7 @@ class EpiRoute
    */
   public function load($file)
   {
+    print "si si la estsa cargando...<br>\n";
     $file = Epi::getPath('config') . "/{$file}";
     if(!file_exists($file))
     {
@@ -277,7 +278,7 @@ class EpiRoute
   */
   public function addLazyRoute($route=false, $include=false)
   {
-    $this->lazyRoute[]=array('path'=>$route, 'include'=>$fileinclude);
+    $this->lazyRoute[]=array('path'=>$route, 'include'=>$include);
     $this->lazyRegexes[]= "#^{$route}/(.*)$#";
     if(EPi::GetSetting('debug'))
       getDebug()->addMessage(__CLASS__, sprintf('Found lazyRoute : %s : %s ', $path, $include));
