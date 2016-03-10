@@ -48,6 +48,8 @@ interface EpiSessionInterface
 {
   public function get($key = null);
   public function set($key = null, $value = null);
+  public function delete($key = null);
+  public function end();
 }
 
 if(!function_exists('getSession'))
